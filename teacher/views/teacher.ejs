@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  height: 8vh;
+  background-color: rgb(59, 59, 241);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+h3 {
+  font-weight: 250;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+ul {
+  list-style: none;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+li {
+  margin-left: 8px;
+}
+
+.container {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.display {
+  width: 70vw;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+footer {
+  background-color: rgb(59, 59, 241);
+  padding: 30px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: rgb(75, 60, 40);
+}
+
+.mid {
+  flex-grow: 1;
+  background-image: url(db.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+
+footer p {
+  margin: 0;
+}
+
+h2 {
+  color: rgb(190, 204, 217);
+  font-size: 33px;
+  text-align: left;
+}
+
+button {
+  width: 3rem;
+  background-color: red;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button.pos {
+  background-color: green;
+}
+
+button.neg {
+  background-color: red;
+}
+
+button:hover {
+  background-color: rgb(233, 233, 236);
+  cursor: pointer;
+}
+
+.card {
+  width: 94%;
+  height: 8rem;
+  background-color: rgb(66, 149, 217);
+  font: 100 1.1rem sans-serif;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 2vmax;
+  color: rgba(11, 9, 9, 0.868);
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0%;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 10vh;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .container {
+    margin-top: 15vw;
+    padding: 0 20px;
+  }
+
+  .display {
+    margin: 20px 0;
+  }
+
+  form {
+    margin-left: 0;
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    height: 12vh;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  li {
+    margin-left: 5px;
+  }
+
+  .container {
+    margin-top: 20vw;
+  }
+
+  .display {
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+  </style>
+  <body>
+    <div class="header">
+      <h3>IIIT</h3>
+      <ul>
+        <li><a href="/#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mid">
+      <div class="container">
+        <div class="display">
+           <!-- Display database data in cards -->
+           <% applications.forEach(function(application, index) { %>
+            <div class="card">
+              <p>ID: <%= application.id %></p>
+              <p>Name: <%= application.password %></p>
+              <p>Room No.: <%= application.roomno %></p>
+              <p>Address: <%= application.address %></p>
+              <p>Period of Absence: <%= application.period %></p>
+              <p>Contact no.: <%= application.phone %></p>
+              <form method="post" action="/permission">
+                <div class="permission">
+                  <input type="hidden" name="cardIndex" value="<%= index %>">
+                  <input type="hidden" name="cardid" value="<%= application.id  %>">
+                  <button type="submit" name="permit" value="accept">Accept</button>
+                  <button type="submit" name="permit" value="reject">Reject</button>
+                </div>
+              </form>
+            </div>
+            <% }) %>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>2023 Your Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

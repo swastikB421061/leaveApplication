@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.c1123{
+    font-weight: 900;
+    font-size: 18px;
+    color: white;
+    word-spacing: 15px;
+    font-size: 20px;
+    width: 100%;
+}
+.topHeader{
+    background: #3586ff;
+    padding: 5px 0px;
+    
+}
+
+.container{
+    margin: 0px auto;
+}
+.headerMenu{
+    position: relative;
+    box-shadow: 0px 2px 5px 0px;
+}
+.contentsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainMenu{
+    list-style: none;
+    float: right;
+    margin-top: 3px;
+   
+}
+.mid{
+    background-image: url("img5.webp");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    height: 100%;
+
+}
+.mainMenu a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.mainMenu li{
+    float: left;
+    padding: 20px 15px;
+
+    
+}
+.logo{
+    margin-left: 10px;
+}
+h2{
+    color: aliceblue;
+}
+
+
+.footer {
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+  
+ 
+.menu__item {
+    list-style: none;
+}
+  
+  
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+  
+
+  
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+form {
+    margin-top: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .containermid {
+    max-width: 400px;
+    margin: 25vh auto;
+    padding: 20px;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+</style>
+<body>
+    <div class="topHeader">
+        <div class="container">
+            <div class="width">
+                <marquee class="c1123">International Institute of Information and Technology Bhubaneswar</marquee>
+            </div>
+        </div>
+    </div>
+    <div class="headerMenu">
+        <div class="contentsHeader">
+           <div class="logo"><img src="logo1.jpg" alt="logo" width="75px"></div>
+            <ul class="mainMenu">
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="containermid">
+            <h2>FACULTY</h2>
+        <form method="post" action="/home">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required="">
+      
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required="">
+      
+            <input type="submit" value="Enter">
+          </form>
+          </div>
+    </div>
+    <footer class="footer">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <h3> 2006-2020 IIIT Bhubaneswar Malipada Khordha Pin: 751003</h3>
+      </footer>
+
+    
+
+</body></html>

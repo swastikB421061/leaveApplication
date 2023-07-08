@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+
+body{
+    background: lightskyblue;
+    padding: 0 10px;
+}
+
+.wrapper{
+   max-width: 500px;
+   width: 100%;
+   /* height: 100%; */
+   background: #fff;
+   margin:20px auto;
+   padding: 30px;
+   box-shadow: 2px 2px 2px rgba(0,0,0,0.125);
+    
+}
+.wrapper .title{
+   font-size: 24px;
+   font-weight: 700;
+   margin-bottom: 25px;
+   
+   text-transform: uppercase;
+   text-align: center;
+}
+
+
+.wrapper .form{
+    width: 100%;
+}
+
+
+.wrapper .form .input_field{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.wrapper .form .input_field label{
+
+    width:200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 24px;
+ 
+}
+
+.wrapper .form .input_field .input
+.wrapper .form .input_field .textarea{
+    width: 100%;
+    border:1px solid #d5dbd9;
+    font-size: 20px;
+    padding: 8px 10px;
+    border-radius:3px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* .wrapper .form .input_field .textarea{
+    resize: none;
+    height:125px;
+} */
+
+.wrapper .form .input_field .custom_select{
+    position: relative;
+    width: 100%;
+    height:37px;
+
+}
+.wrapper .form .input_field .custom_select select{
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #d5dbd9;
+    width: 100%;
+    height:100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline:none;
+}
+.wrapper .form .input_field .custom_select:before{
+    content: " ";
+    position: absolute;
+    top:12px;
+    right:10px;
+    border:8px solid;
+    border-color:black transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field .textarea:focus,
+.wrapper .form .input_field  .select:focus{
+    border:1px solid black;
+}
+
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #fec107;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+.wrapper .form .input_field:last-child{
+    margin-bottom: 0;
+} 
+.wrapper .form .input_field .btn:hover{
+    background: #ffd658;
+
+}
+@media (max-width:420px){
+    .wrapper .form .input_field{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper .form .input_field label{
+        margin-bottom: 10px;
+    
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="title">
+            Leave Application Form
+        </div>
+        <form action="/saved" method="post">
+            <div class="form">
+                
+                 <div class="input_field">
+                    <label >Room number</label> 
+                    <input type="text" class="input" name="roomno" required>
+                 </div>
+                 <div class="input_field">
+                    <label >Period of absence</label> 
+                    <input type="text" class="input" name="period" required>
+                 </div>
+                 <div class="input_field">
+                    <label >Address during absence</label> 
+                   <textarea class="textarea" name="address" required></textarea>
+                 </div>
+                
+                <div class="input_field">
+                    <label >Phone number</label> 
+                    <input type="text" class="input" name="phone" required>
+                 </div>
+    
+                 <div class="input_field">
+                    <label >Gender</label> 
+                   <div class="custom_select">
+                    <select name="" id="">
+                        <option value=" ">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                   </div>
+                 </div>
+    
+    
+                 <div class="input_field">
+                     
+                    <input type="submit" value="Login" onclick="showAlert()" class="btn">
+                 </div>
+    
+            </div>
+        </form>
+       
+    </div>
+
+    <script>
+    form.addEventListener("submit", (e) => {
+     e.preventDefault();})
+    function showAlert() {
+      alert("Applied!!! wait for confirmation");
+    }
+    
+
+        document.addEventListener('DOMContentLoaded', () => {
+  // Retrieve and set the name from local storage
+  const savedName = localStorage.getItem('name');
+  if (savedName) {
+    const nameInput = document.getElementById('nameInput');
+    nameInput.value = savedName;
+  }
+});
+
+    </script>
+    
+</body>
+</html>

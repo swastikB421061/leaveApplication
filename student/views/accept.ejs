@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .svg{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 23rem;
+            color: green;
+        }
+        .svg h1{
+            font-size: 3rem;
+            gap: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="svg"><i class='bx bxs-badge-check' ></i>
+        <h1>VERIFIED</h1>
+        <h1>ID: <%=st.id%></h1>
+        <h1>Period of absence:<%=st.period%></h1>
+    </div>
+    
+</body>
+</html>
